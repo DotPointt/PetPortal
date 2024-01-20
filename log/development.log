@@ -211,3 +211,396 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 3450)
 
 
+Started GET "/" for ::1 at 2024-01-20 18:16:38 +0300
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 5203)
+Completed 200 OK in 66ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 7775)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:32:22 +0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5188)
+Completed 200 OK in 49ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 7817)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:32:23 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3104)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3989)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:26 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3650)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 4755)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:30 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3117)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3496)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:31 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3112)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3485)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:36:35 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 3186)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 4065)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:37 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3122)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 3501)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:36:40 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3112)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3486)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:41 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3112)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 3485)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:49 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3634)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 4739)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:36:52 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3185)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:53 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3123)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 3497)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:36:56 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3120)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 3494)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:37:03 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3639)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 4749)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:37:12 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 211)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3633)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 4738)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:37:52 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3634)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 4740)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:38:33 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 34.7ms | Allocations: 6680)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 10101)
+Completed 500 Internal Server Error in 50ms (Allocations: 11184)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `projects_path' for #<ActionView::Base:0x00000000008818>):
+     7:     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     8:       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     9:         <li class="nav-item">
+    10:           <%= link_to "Home", projects_path%>
+    11:           <a class="nav-link active" aria-current="page" href="#">Home</a>
+    12:         </li>
+    13:         <li class="nav-item">
+  
+app/views/shared/_navbar.html.erb:10
+app/views/layouts/application.html.erb:20
+Started GET "/about" for ::1 at 2024-01-20 18:39:08 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 25.9ms | Allocations: 4184)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 7747)
+Completed 500 Internal Server Error in 51ms (Allocations: 8922)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `projects_path' for #<ActionView::Base:0x00000000008cf0>):
+     7:     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     8:       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     9:         <li class="nav-item">
+    10:           <%= link_to "Home", projects_path %>
+    11:           <a class="nav-link active" aria-current="page" href="#">Home</a>
+    12:         </li>
+    13:         <li class="nav-item">
+  
+app/views/shared/_navbar.html.erb:10
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2024-01-20 18:39:09 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 28.1ms | Allocations: 4040)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 7142)
+Completed 500 Internal Server Error in 43ms (Allocations: 7991)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `projects_path' for #<ActionView::Base:0x00000000009100>):
+     7:     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     8:       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     9:         <li class="nav-item">
+    10:           <%= link_to "Home", projects_path %>
+    11:           <a class="nav-link active" aria-current="page" href="#">Home</a>
+    12:         </li>
+    13:         <li class="nav-item">
+  
+app/views/shared/_navbar.html.erb:10
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2024-01-20 18:39:13 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 17.3ms | Allocations: 4040)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 7074)
+Completed 500 Internal Server Error in 30ms (Allocations: 7421)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `projects_path' for #<ActionView::Base:0x000000000093f8>):
+     7:     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     8:       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     9:         <li class="nav-item">
+    10:           <%= link_to "Home", projects_path %>
+    11:           <a class="nav-link active" aria-current="page" href="#">Home</a>
+    12:         </li>
+    13:         <li class="nav-item">
+  
+app/views/shared/_navbar.html.erb:10
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2024-01-20 18:39:14 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 17.4ms | Allocations: 4040)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7074)
+Completed 500 Internal Server Error in 25ms (Allocations: 7420)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `projects_path' for #<ActionView::Base:0x000000000096c8>):
+     7:     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     8:       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     9:         <li class="nav-item">
+    10:           <%= link_to "Home", projects_path %>
+    11:           <a class="nav-link active" aria-current="page" href="#">Home</a>
+    12:         </li>
+    13:         <li class="nav-item">
+  
+app/views/shared/_navbar.html.erb:10
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2024-01-20 18:39:40 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 12.6ms | Allocations: 4202)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 7634)
+Completed 500 Internal Server Error in 35ms (Allocations: 8717)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<ActionView::Base:0x00000000009a88>):
+     7:     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     8:       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     9:         <li class="nav-item">
+    10:           <%= link_to "Home", root %>
+    11:           <a class="nav-link active" aria-current="page" href="#">Home</a>
+    12:         </li>
+    13:         <li class="nav-item">
+  
+app/views/shared/_navbar.html.erb:10
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2024-01-20 18:39:49 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3699)
+Completed 200 OK in 21ms (Views: 18.9ms | Allocations: 4818)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:40:09 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 3687)
+Completed 200 OK in 23ms (Views: 20.3ms | Allocations: 4792)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:40:26 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 3692)
+Completed 200 OK in 27ms (Views: 25.1ms | Allocations: 4798)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:40:29 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3153)
+Completed 200 OK in 14ms (Views: 12.5ms | Allocations: 3527)
+
+
+Started GET "/about" for ::1 at 2024-01-20 18:40:30 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3223)
+Completed 200 OK in 20ms (Views: 17.7ms | Allocations: 4098)
+
+
+Started GET "/" for ::1 at 2024-01-20 18:40:31 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3156)
+Completed 200 OK in 15ms (Views: 14.0ms | Allocations: 3530)
+
+
