@@ -14,3 +14,126 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 18ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 2483)
 
 
+Started GET "/about" for ::1 at 2024-01-20 15:12:09 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 222)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: e6909801bf1f5aef640d
+Version: webpack 4.47.0
+Time: 477ms
+Built at: 20.01.2024 15:12:11
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-514fba105825a5af4d8f.js   8.18 KiB  application  [emitted] [immutable]  application
+js/application-514fba105825a5af4d8f.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-514fba105825a5af4d8f.js js/application-514fba105825a5af4d8f.js.map
+[./app/javascript/packs/application.js] 4.28 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package '@babel/plugin-proposal-private-methods' imported from /home/kamil/RoR/PetPortal/babel-virtual-resolve-base.js
+    at new NodeError (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:194:5)
+    at packageResolve (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:908:9)
+    at moduleResolve (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:937:20)
+    at defaultResolve (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1007:15)
+    at resolve (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1020:12)
+    at tryImportMetaResolve (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/files/plugins.js:142:45)
+    at resolveStandardizedNameForImport (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/files/plugins.js:164:19)
+    at resolveStandardizedName (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/files/plugins.js:173:22)
+    at loadPlugin (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/files/plugins.js:52:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:291:5)
+    at /home/kamil/RoR/PetPortal/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:43:15)
+    at Function.all (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-descriptors.js:99:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/gensync-utils/functional.js:39:27
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/config-chain.js:77:27)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at step (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:269:25)
+    at evaluateAsync (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:291:5)
+    at /home/kamil/RoR/PetPortal/node_modules/gensync/index.js:93:9
+    at new Promise (<anonymous>)
+    at async (/home/kamil/RoR/PetPortal/node_modules/gensync/index.js:92:14)
+    at stopHiding - secret - don't use this - v1 (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/errors/rewrite-stack-trace.js:47:12)
+    at loadPartialConfigAsync (/home/kamil/RoR/PetPortal/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/home/kamil/RoR/PetPortal/node_modules/babel-loader/lib/index.js:126:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/home/kamil/RoR/PetPortal/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/home/kamil/RoR/PetPortal/node_modules/babel-loader/lib/index.js:4:194)
+    at /home/kamil/RoR/PetPortal/node_modules/babel-loader/lib/index.js:4:364
+    at new Promise (<anonymous>)
+
+  Rendered layout layouts/application.html.erb (Duration: 2371.1ms | Allocations: 13523)
+Completed 200 OK in 2380ms (Views: 2373.5ms | ActiveRecord: 0.0ms | Allocations: 16093)
+
+
+Started GET "/about" for ::1 at 2024-01-20 15:13:10 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3236)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4359)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (84.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (108.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProjects (20240120141922)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" text, "description" text, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240120141922"]]
+  [1m[36mTRANSACTION (90.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-01-20 14:24:50.281931"], ["updated_at", "2024-01-20 14:24:50.281931"]]
+  [1m[36mTRANSACTION (74.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pet_portal_development"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "db/test"."sqlite3"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pet_portal_development"[0m
+  [1m[35m (624.8ms)[0m  [1m[35mCREATE DATABASE "pet_portal_development" ENCODING = 'utf8'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" CASCADE[0m
+  [1m[35m (94.3ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "title" text, "description" text, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (91.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240120141922)[0m
+  [1m[35m (175.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-01-20 14:41:39.153074"], ["updated_at", "2024-01-20 14:41:39.153074"]]
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8354665fd49423ccb75a0c44f6fec6453b8c9d0c"], ["created_at", "2024-01-20 14:41:39.190135"], ["updated_at", "2024-01-20 14:41:39.190135"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
