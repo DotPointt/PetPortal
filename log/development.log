@@ -1107,3 +1107,25 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 7203)
 
 
+Started GET "/about" for 127.0.0.1 at 2024-01-24 00:28:35 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3192)
+Completed 200 OK in 11ms (Views: 8.3ms | Allocations: 4078)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-01-24 00:28:48 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3147)
+Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 3521)
+
+
