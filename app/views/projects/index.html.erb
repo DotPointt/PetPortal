@@ -1,5 +1,12 @@
 <h1>list of the projects here</h1>    
 
+<%= link_to "Newest", :sort => "created_at desc"%>
+<%= link_to "Oldest", :sort => "created_at asc"%>
+<--most liked>
+
+
+
+
 <h2><%= link_to "New Project", new_project_path %><h2>
 
 <% @projects.each do |project| %>
@@ -10,3 +17,5 @@
     <p><%= button_to "Destroy", project, method: :delete %></p>
   </div>
 <% end %>
+
+<div  class="pagination_interface"><%= paginate @projects %></div>

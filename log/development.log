@@ -1723,3 +1723,1311 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.8ms | Allocations: 4348)
 
 
+Started GET "/" for ::1 at 2024-01-25 01:09:29 +0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 5468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 10494)
+Completed 200 OK in 53ms (Views: 28.1ms | ActiveRecord: 10.2ms | Allocations: 15331)
+
+
+Started GET "/projects/new" for ::1 at 2024-01-25 01:09:30 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 16.8ms | Allocations: 3190)
+  Rendered projects/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 3500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 6562)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 7118)
+
+
+Started POST "/projects" for ::1 at 2024-01-25 01:09:35 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"3", "description"=>"3"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mProject Create (1.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "3"], ["description", "3"], ["created_at", "2024-01-24 22:09:35.167309"], ["updated_at", "2024-01-24 22:09:35.167309"]]
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (22.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 38ms (ActiveRecord: 26.2ms | Allocations: 2960)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:09:35 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4761)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.3ms | Allocations: 5216)
+
+
+Started GET "/projects/new" for ::1 at 2024-01-25 01:09:36 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.7ms | Allocations: 864)
+  Rendered projects/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4014)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4427)
+
+
+Started POST "/projects" for ::1 at 2024-01-25 01:09:37 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"4", "description"=>""}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mProject Create (1.9ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "4"], ["description", ""], ["created_at", "2024-01-24 22:09:37.301252"], ["updated_at", "2024-01-24 22:09:37.301252"]]
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (22.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 37ms (ActiveRecord: 26.0ms | Allocations: 2650)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:09:37 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 5015)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 2.4ms | Allocations: 5467)
+
+
+Started GET "/projects/new" for ::1 at 2024-01-25 01:09:38 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 4.0ms | Allocations: 864)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4012)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 4415)
+
+
+Started POST "/projects" for ::1 at 2024-01-25 01:09:39 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"5", "description"=>""}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mProject Create (2.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "5"], ["description", ""], ["created_at", "2024-01-24 22:09:39.735157"], ["updated_at", "2024-01-24 22:09:39.735157"]]
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (22.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 41ms (ActiveRecord: 27.5ms | Allocations: 2668)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:09:39 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 5276)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 2.5ms | Allocations: 5729)
+
+
+Started GET "/projects/new" for ::1 at 2024-01-25 01:09:42 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.5ms | Allocations: 864)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4012)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 4415)
+
+
+Started POST "/projects" for ::1 at 2024-01-25 01:09:44 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"6", "description"=>""}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mProject Create (3.2ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "6"], ["description", ""], ["created_at", "2024-01-24 22:09:44.088934"], ["updated_at", "2024-01-24 22:09:44.088934"]]
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (37.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 55ms (ActiveRecord: 43.1ms | Allocations: 2656)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:09:44 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 30.3ms | Allocations: 2216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 5275)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 3.2ms | Allocations: 5728)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:18:42 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 45.0ms | Allocations: 10014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 13044)
+Completed 200 OK in 61ms (Views: 53.8ms | ActiveRecord: 19.5ms | Allocations: 14963)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:18:56 +0300
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 6246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 11272)
+Completed 200 OK in 64ms (Views: 34.8ms | ActiveRecord: 11.2ms | Allocations: 16140)
+
+
+Started GET "/login" for ::1 at 2024-01-25 01:33:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/projects" for ::1 at 2024-01-25 01:38:06 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 7729)
+Completed 200 OK in 83ms (Views: 32.3ms | ActiveRecord: 27.7ms | Allocations: 15090)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:40:29 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3705)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3769)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.8ms | Allocations: 5193)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for nil:NilClass):
+    11:   </div>
+    12: <% end %>
+    13: 
+    14: <%= paginate @users %>
+  
+app/views/projects/index.html.erb:14
+Started GET "/projects" for ::1 at 2024-01-25 01:40:41 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 52.9ms | Allocations: 9877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 13321)
+Completed 200 OK in 70ms (Views: 53.1ms | ActiveRecord: 12.4ms | Allocations: 14778)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:42:05 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 5889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 9422)
+Completed 200 OK in 37ms (Views: 28.3ms | ActiveRecord: 3.7ms | Allocations: 10861)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:42:26 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 5899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 9433)
+Completed 200 OK in 47ms (Views: 37.0ms | ActiveRecord: 4.9ms | Allocations: 10883)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:43:31 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 5900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 9440)
+Completed 200 OK in 45ms (Views: 36.3ms | ActiveRecord: 5.0ms | Allocations: 10885)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:43:58 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 5900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 9433)
+Completed 200 OK in 39ms (Views: 31.1ms | ActiveRecord: 4.1ms | Allocations: 10876)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:44:00 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 7082)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 3.3ms | Allocations: 7692)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:44:55 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 35.3ms | Allocations: 5890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 9423)
+Completed 200 OK in 58ms (Views: 45.6ms | ActiveRecord: 6.4ms | Allocations: 10861)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:45:02 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 5897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 9437)
+Completed 200 OK in 33ms (Views: 26.5ms | ActiveRecord: 3.2ms | Allocations: 10881)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:45:11 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 30.5ms | Allocations: 5899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 9433)
+Completed 200 OK in 48ms (Views: 36.8ms | ActiveRecord: 6.5ms | Allocations: 10883)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:45:23 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 5888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 9425)
+Completed 200 OK in 66ms (Views: 54.6ms | ActiveRecord: 6.4ms | Allocations: 10863)
+
+
+Started GET "/projects" for ::1 at 2024-01-25 01:46:00 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 4021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 7087)
+Completed 200 OK in 38ms (Views: 29.5ms | ActiveRecord: 5.3ms | Allocations: 7697)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 01:46:32 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 21.9ms | Allocations: 3023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 6094)
+Completed 200 OK in 35ms (Views: 28.6ms | ActiveRecord: 1.7ms | Allocations: 6703)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 01:52:46 +0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 29.7ms | Allocations: 9065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 23256)
+Completed 200 OK in 90ms (Views: 58.7ms | ActiveRecord: 13.6ms | Allocations: 28935)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 01:52:54 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 4183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 7726)
+Completed 200 OK in 50ms (Views: 41.7ms | ActiveRecord: 3.1ms | Allocations: 9176)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 01:59:39 +0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 8557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 14953)
+Completed 200 OK in 70ms (Views: 39.0ms | ActiveRecord: 12.9ms | Allocations: 20633)
+
+
+Started GET "/" for ::1 at 2024-01-25 01:59:41 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 4627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 8660)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 3.6ms | Allocations: 9283)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:04:11 +0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 10398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 16794)
+Completed 200 OK in 76ms (Views: 43.8ms | ActiveRecord: 15.6ms | Allocations: 22476)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:04:14 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 3968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 7994)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 5.6ms | Allocations: 8617)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:04:16 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 3959)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 7984)
+Completed 200 OK in 33ms (Views: 25.7ms | ActiveRecord: 4.5ms | Allocations: 8604)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:10:55 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 5797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 10315)
+Completed 200 OK in 71ms (Views: 28.5ms | ActiveRecord: 26.9ms | Allocations: 16559)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:13:10 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 5488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 10005)
+Completed 200 OK in 63ms (Views: 52.0ms | ActiveRecord: 6.1ms | Allocations: 11443)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:13:11 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 3994)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 8019)
+Completed 200 OK in 36ms (Views: 28.1ms | ActiveRecord: 5.1ms | Allocations: 8629)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:13:12 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3985)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8009)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 3.2ms | Allocations: 8618)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:13:55 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 5510)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 10041)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 3.6ms | Allocations: 11499)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 02:14:02 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 6843)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 2.1ms | Allocations: 7451)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:14:03 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 3989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8013)
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 3.2ms | Allocations: 8623)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:14:17 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 5487)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 10004)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 3.3ms | Allocations: 11442)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:14:25 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 5486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 10003)
+Completed 200 OK in 56ms (Views: 45.0ms | ActiveRecord: 5.4ms | Allocations: 11440)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:14:56 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 5486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 10013)
+Completed 200 OK in 56ms (Views: 44.9ms | ActiveRecord: 4.9ms | Allocations: 11451)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:17:12 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 35.5ms | Allocations: 5494)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 10013)
+Completed 200 OK in 62ms (Views: 50.9ms | ActiveRecord: 6.2ms | Allocations: 11457)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:17:13 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 3994)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 8029)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 4.3ms | Allocations: 8640)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:17:14 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 3985)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 8019)
+Completed 200 OK in 34ms (Views: 26.2ms | ActiveRecord: 4.6ms | Allocations: 8630)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:17:47 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 5497)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 10016)
+Completed 200 OK in 48ms (Views: 38.5ms | ActiveRecord: 5.7ms | Allocations: 11459)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:17:53 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 5485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 10393)
+Completed 200 OK in 53ms (Views: 43.5ms | ActiveRecord: 5.8ms | Allocations: 11830)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:18:17 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 5561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 10078)
+Completed 200 OK in 60ms (Views: 49.3ms | ActiveRecord: 5.9ms | Allocations: 11515)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:19:08 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 5435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 9952)
+Completed 200 OK in 50ms (Views: 40.7ms | ActiveRecord: 5.0ms | Allocations: 11389)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:19:51 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 5436)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 9962)
+Completed 200 OK in 45ms (Views: 35.1ms | ActiveRecord: 5.5ms | Allocations: 11400)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:20:12 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 5496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 10025)
+Completed 200 OK in 61ms (Views: 43.8ms | ActiveRecord: 5.8ms | Allocations: 11470)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 02:20:16 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 6835)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 1.7ms | Allocations: 7445)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:20:17 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 8013)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 4.8ms | Allocations: 8623)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:22:45 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 5492)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 10011)
+Completed 200 OK in 46ms (Views: 36.6ms | ActiveRecord: 5.5ms | Allocations: 11454)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 02:22:48 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6815)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 1.5ms | Allocations: 7423)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 02:23:28 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 3769)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 8286)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 2.2ms | Allocations: 9721)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 02:24:13 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 3768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 8300)
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 1.6ms | Allocations: 9737)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:24:14 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 4504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 8546)
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 5.1ms | Allocations: 9158)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:26:25 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3992)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 8026)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 2.9ms | Allocations: 8638)
+
+
+Started GET "/?page=2" for ::1 at 2024-01-25 02:26:28 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 6288)
+Completed 200 OK in 22ms (Views: 16.1ms | ActiveRecord: 2.4ms | Allocations: 6895)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:26:30 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:5
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3985)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 8009)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 3.5ms | Allocations: 8618)
+
+
+Started GET "/" for ::1 at 2024-01-25 02:34:31 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:17
+  Rendered projects/index.html.erb within layouts/application (Duration: 37.2ms | Allocations: 11475)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 17871)
+Completed 200 OK in 73ms (Views: 43.9ms | ActiveRecord: 12.8ms | Allocations: 22749)
+
+
+Started GET "/?sort=name+asc" for ::1 at 2024-01-25 02:34:35 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"name asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (23.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY name asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:8
+  Rendered projects/index.html.erb within layouts/application (Duration: 40.2ms | Allocations: 2489)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 2554)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 23.3ms | Allocations: 3147)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "name" does not exist
+LINE 1: SELECT "projects".* FROM "projects" ORDER BY name asc LIMIT ...
+                                                     ^
+):
+     5: 
+     6: <h2><%= link_to "New Project", new_project_path %><h2>
+     7: 
+     8: <% @projects.each do |project| %>
+     9:   <div class="record">
+    10:     <p><%= project.title %></p>
+    11:     <p><%= project.description %></p>
+  
+app/views/projects/index.html.erb:8
+Started GET "/" for ::1 at 2024-01-25 02:34:52 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:17
+  Rendered projects/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 5946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 10594)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 4.2ms | Allocations: 12053)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:34:53 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:8
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:17
+  Rendered projects/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 8148)
+Completed 200 OK in 29ms (Views: 20.8ms | ActiveRecord: 4.2ms | Allocations: 8763)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:35:52 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:18
+  Rendered projects/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 5724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 10241)
+Completed 200 OK in 40ms (Views: 32.6ms | ActiveRecord: 4.5ms | Allocations: 11667)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:07 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:18
+  Rendered projects/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 5731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 10249)
+Completed 200 OK in 47ms (Views: 38.1ms | ActiveRecord: 4.5ms | Allocations: 11688)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:15 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:10
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:19
+  Rendered projects/index.html.erb within layouts/application (Duration: 29.3ms | Allocations: 5729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 10257)
+Completed 200 OK in 50ms (Views: 42.1ms | ActiveRecord: 4.1ms | Allocations: 11691)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:20 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:11
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:20
+  Rendered projects/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 5724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 10241)
+Completed 200 OK in 51ms (Views: 41.8ms | ActiveRecord: 5.1ms | Allocations: 11667)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:24 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:11
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:20
+  Rendered projects/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 5724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 10241)
+Completed 200 OK in 61ms (Views: 49.8ms | ActiveRecord: 5.5ms | Allocations: 11669)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:30 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:11
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:20
+  Rendered projects/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 5728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 10256)
+Completed 200 OK in 48ms (Views: 39.5ms | ActiveRecord: 4.7ms | Allocations: 11688)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:37 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:11
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:20
+  Rendered projects/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 5723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 10240)
+Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 3.6ms | Allocations: 11666)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:36:46 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:11
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:20
+  Rendered projects/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 5724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 10241)
+Completed 200 OK in 36ms (Views: 29.8ms | ActiveRecord: 3.3ms | Allocations: 11667)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:37:24 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:12
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:21
+  Rendered projects/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 5731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 10260)
+Completed 200 OK in 46ms (Views: 32.5ms | ActiveRecord: 9.5ms | Allocations: 11687)
+
+
+Started GET "/?sort=created_at+asc" for ::1 at 2024-01-25 02:37:33 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:12
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:21
+  Rendered projects/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 4189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 8224)
+Completed 200 OK in 33ms (Views: 25.5ms | ActiveRecord: 4.3ms | Allocations: 8824)
+
+
+Started GET "/?sort=created_at+desc" for ::1 at 2024-01-25 02:37:34 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at desc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:12
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:21
+  Rendered projects/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 8204)
+Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 3.8ms | Allocations: 8802)
+
+
+Started GET "/?sort=created_at+asc" for ::1 at 2024-01-25 02:37:34 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:12
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:21
+  Rendered projects/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 8204)
+Completed 200 OK in 25ms (Views: 19.0ms | ActiveRecord: 3.6ms | Allocations: 8802)
+
+
+Started GET "/?page=2&sort=created_at+asc" for ::1 at 2024-01-25 02:37:37 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2", "sort"=>"created_at asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/projects/index.html.erb:12
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7026)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 1.7ms | Allocations: 7623)
+
+
+Started GET "/?sort=created_at+asc" for ::1 at 2024-01-25 02:37:39 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:12
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:21
+  Rendered projects/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 4184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 8218)
+Completed 200 OK in 36ms (Views: 26.3ms | ActiveRecord: 5.9ms | Allocations: 8817)
+
+
+Started GET "/?sort=created_at+asc" for ::1 at 2024-01-25 02:53:07 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"sort"=>"created_at asc"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (4.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:12
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:21
+  Rendered projects/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 5816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 10334)
+Completed 200 OK in 83ms (Views: 36.4ms | ActiveRecord: 29.5ms | Allocations: 16604)
+
+
+Started GET "/about" for ::1 at 2024-01-25 02:53:10 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4131)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 5151)
+
+
+Started GET "/about" for ::1 at 2024-01-25 02:54:11 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4647)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5861)
+
+
+Started GET "/about" for ::1 at 2024-01-25 02:54:43 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 4637)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 5849)
+
+
+Started GET "/about" for ::1 at 2024-01-25 02:54:53 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4637)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 5849)
+
+
+Started GET "/about" for ::1 at 2024-01-25 02:54:57 +0300
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4074)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4459)
+
+
