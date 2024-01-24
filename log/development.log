@@ -1129,3 +1129,597 @@ Processing by AboutController#index as HTML
 Completed 200 OK in 9ms (Views: 8.0ms | Allocations: 3521)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-24 11:48:14 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1612)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1676)
+Completed 500 Internal Server Error in 8ms (Allocations: 2766)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_index' for nil:NilClass):
+    1: <h1>list of the projects here</h1>    
+    2: 
+    3: <% @projects.each_with_index do |project, index| %>
+    4:   <div class="record">
+    5:     <p><%= index + 1 %>. <%=project.name%></p>
+    6:     <p><%= project.description %></p>
+  
+app/views/projects/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-01-24 11:52:54 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1626)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1691)
+Completed 500 Internal Server Error in 7ms (Allocations: 2781)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>list of the projects here</h1>    
+    2: 
+    3: <% @projects.each do |project| %>
+    4:   <div class="record">
+    5:     <%= project.name %></p>
+    6:     <p><%= project.description %></p>
+  
+app/views/projects/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:07:05 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1608)
+Completed 500 Internal Server Error in 5ms (Allocations: 2691)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f01f4043ad8>::Projects):
+    1: <h1>list of the projects here</h1>    
+    2: 
+    3: <% Projects.each do |project| %>
+    4:   <div class="record">
+    5:     <p><%= project.title %></p>
+    6:     <p><%= project.description %></p>
+  
+app/views/projects/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:07:28 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1625)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1689)
+Completed 500 Internal Server Error in 6ms (Allocations: 2772)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>list of the projects here</h1>    
+    2: 
+    3: <% @projects.each do |project| %>
+    4:   <div class="record">
+    5:     <p><%= project.title %></p>
+    6:     <p><%= project.description %></p>
+  
+app/views/projects/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:15:53 +0300
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 810)
+
+
+  
+SyntaxError (/home/timur/Git/PetPortal/app/models/project.rb:2: syntax error, unexpected ':', expecting `end'
+  has_many: ProjectMembership
+          ^
+/home/timur/Git/PetPortal/app/models/project.rb:3: syntax error, unexpected ':', expecting `end'
+  has_many: User, through: :ProjectMembe...
+          ^
+):
+  
+app/models/project.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/project.rb:3: syntax error, unexpected ':', expecting `end'
+app/models/project.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/project.rb:3: syntax error, unexpected ':', expecting `end'
+app/controllers/projects_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:17:24 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1424)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1488)
+Completed 500 Internal Server Error in 128ms (Allocations: 4179)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>list of the projects here</h1>    
+    2: 
+    3: <% @projects.each do |project| %>
+    4:   <div class="record">
+    5:     <p><%= project.title %></p>
+    6:     <p><%= project.description %></p>
+  
+app/views/projects/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:24:36 +0300
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 49ms (Allocations: 4824)
+
+
+  
+NoMethodError (undefined method `page' for Project (call 'Project.connection' to establish a connection):Class):
+  
+app/controllers/projects_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:24:58 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (57.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 260.1ms | Allocations: 6162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 610.2ms | Allocations: 12812)
+Completed 200 OK in 618ms (Views: 611.9ms | ActiveRecord: 87.9ms | Allocations: 14529)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:41:53 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 37.8ms | Allocations: 10032)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 10096)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 16.2ms | Allocations: 11192)
+
+
+  
+ActionView::Template::Error (undefined method `paginate' for #<ActionView::Base:0x00000000011198>):
+    11:   </div>
+    12: <% end %>
+    13: 
+    14: <%= paginate @projects %>
+  
+app/views/projects/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2024-01-24 12:43:03 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 4615)
+Completed 200 OK in 26ms (Views: 19.7ms | ActiveRecord: 3.1ms | Allocations: 5744)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2024-01-24 12:43:04 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 331.7ms | Allocations: 6725)
+  Rendered projects/new.html.erb within layouts/application (Duration: 333.6ms | Allocations: 7037)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 349.7ms | Allocations: 10005)
+Completed 200 OK in 379ms (Views: 350.6ms | ActiveRecord: 14.2ms | Allocations: 14125)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:43:09 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>";flmbdfb", "description"=>"dfklvnkldfv"}, "commit"=>"Create Project"}
+[31mUnpermitted parameter: :title[0m
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 5.2ms | Allocations: 1879)
+  Rendered projects/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4954)
+Completed 422 Unprocessable Entity in 21ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 6251)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:43:19 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"", "description"=>"dfklvnkldfv"}, "commit"=>"Create Project"}
+[31mUnpermitted parameter: :title[0m
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 4.3ms | Allocations: 1814)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4889)
+Completed 422 Unprocessable Entity in 17ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 6039)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:43:24 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"qwerty", "description"=>"dfklvnkldfv"}, "commit"=>"Create Project"}
+[31mUnpermitted parameter: :title[0m
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.5ms | Allocations: 1814)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4889)
+Completed 422 Unprocessable Entity in 14ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 6039)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:45:18 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"qwerty", "description"=>"dfklvnkldfv"}, "commit"=>"Create Project"}
+[31mUnpermitted parameter: :title[0m
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 7.0ms | Allocations: 2137)
+  Rendered projects/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5905)
+Completed 422 Unprocessable Entity in 28ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 7796)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2024-01-24 12:45:22 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.3ms | Allocations: 868)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4015)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4405)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:45:24 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 4140)
+Completed 200 OK in 76ms (Views: 70.5ms | ActiveRecord: 2.1ms | Allocations: 4657)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2024-01-24 12:45:25 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 5.6ms | Allocations: 866)
+  Rendered projects/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 4017)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 4406)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:45:29 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"qwff", "description"=>"qwfqwf"}, "commit"=>"Create Project"}
+[31mUnpermitted parameter: :title[0m
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.7ms | Allocations: 1813)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4893)
+Completed 422 Unprocessable Entity in 15ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 6041)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:50:50 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"asm, ca", "description"=>"qwfqwf"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (380.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "asm, ca"], ["description", "qwfqwf"], ["created_at", "2024-01-24 09:50:50.999187"], ["updated_at", "2024-01-24 09:50:50.999187"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 433ms (ActiveRecord: 406.6ms | Allocations: 11294)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:50:51 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4331)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 2.0ms | Allocations: 4844)
+
+
+Started DELETE "/projects/1" for 127.0.0.1 at 2024-01-24 12:50:55 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1135)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:31:in `destroy'
+Started DELETE "/projects/1" for 127.0.0.1 at 2024-01-24 12:52:10 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1088)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:31:in `destroy'
+Started GET "/projects/" for 127.0.0.1 at 2024-01-24 12:52:13 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 4507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 7573)
+Completed 200 OK in 30ms (Views: 14.6ms | ActiveRecord: 12.4ms | Allocations: 9284)
+
+
+Started DELETE "/projects/1" for 127.0.0.1 at 2024-01-24 12:52:15 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1133)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:31:in `destroy'
+Started DELETE "/projects/1" for 127.0.0.1 at 2024-01-24 12:54:18 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2546)
+
+
+  
+NameError (uninitialized constant ProjectsController::Projects):
+  
+app/controllers/projects_controller.rb:40:in `set_project'
+Started DELETE "/projects/1" for 127.0.0.1 at 2024-01-24 12:54:30 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mProject Load (29.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:40:in `set_project'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+  [1m[36mProject Destroy (3.0ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 165ms (ActiveRecord: 74.9ms | Allocations: 7559)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:54:30 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3961)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 1.5ms | Allocations: 4471)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2024-01-24 12:54:32 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 6.6ms | Allocations: 919)
+  Rendered projects/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4065)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 4465)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:54:36 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>";m;'am", "description"=>"sa,.cvnasv"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mProject Create (1.2ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", ";m;'am"], ["description", "sa,.cvnasv"], ["created_at", "2024-01-24 09:54:36.591867"], ["updated_at", "2024-01-24 09:54:36.591867"]]
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (61.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 74ms (ActiveRecord: 64.0ms | Allocations: 2760)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:54:36 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4210)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.9ms | Allocations: 4609)
+
+
+Started DELETE "/projects/2" for 127.0.0.1 at 2024-01-24 12:54:38 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:40:in `set_project'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+  [1m[36mProject Destroy (1.8ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (34.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 53ms (ActiveRecord: 41.3ms | Allocations: 2749)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:54:38 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3945)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 2.0ms | Allocations: 4343)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2024-01-24 12:54:39 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.0ms | Allocations: 863)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4014)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4415)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:55:18 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4607)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 3.9ms | Allocations: 5743)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2024-01-24 12:55:19 +0300
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 5.4ms | Allocations: 1186)
+  Rendered projects/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1493)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4558)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 5089)
+
+
+Started POST "/projects" for 127.0.0.1 at 2024-01-24 12:55:22 +0300
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"askl", "description"=>"asvknas"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mProject Create (1.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "askl"], ["description", "asvknas"], ["created_at", "2024-01-24 09:55:22.353157"], ["updated_at", "2024-01-24 09:55:22.353157"]]
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (42.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 58ms (ActiveRecord: 46.7ms | Allocations: 2648)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:55:22 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4209)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.4ms | Allocations: 4608)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2024-01-24 12:55:23 +0300
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:40:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 5.7ms | Allocations: 962)
+  Rendered projects/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4199)
+Completed 200 OK in 27ms (Views: 14.7ms | ActiveRecord: 2.3ms | Allocations: 5417)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2024-01-24 12:55:25 +0300
+Processing by ProjectsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"title"=>"asklvsdvsdv", "description"=>"asvknas"}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:40:in `set_project'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:25:in `update'
+  [1m[36mProject Update (2.2ms)[0m  [1m[33mUPDATE "projects" SET "title" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["title", "asklvsdvsdv"], ["updated_at", "2024-01-24 09:55:25.604859"], ["id", 3]]
+  ↳ app/controllers/projects_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (83.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:25:in `update'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 104ms (ActiveRecord: 89.3ms | Allocations: 3290)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:55:25 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4208)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 2.1ms | Allocations: 4608)
+
+
+Started DELETE "/projects/3" for 127.0.0.1 at 2024-01-24 12:55:27 +0300
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:40:in `set_project'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+  [1m[36mProject Destroy (1.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:33:in `destroy'
+Redirected to http://127.0.0.1:3000/projects
+Completed 302 Found in 51ms (ActiveRecord: 43.3ms | Allocations: 2749)
+
+
+Started GET "/projects" for 127.0.0.1 at 2024-01-24 12:55:27 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3950)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.8ms | Allocations: 4348)
+
+

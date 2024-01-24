@@ -1,5 +1,5 @@
 class ProjectMembership < ApplicationRecord
-  belongs_to: Project
-  belongs_to: User
+  belongs_to :Project
+  belongs_to :User
   
 end
