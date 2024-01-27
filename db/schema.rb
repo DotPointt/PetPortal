@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2024_01_23_180551) do
     t.string "first_name"
     t.string "last_name"
     t.citext "email", null: false
-    t.string "password_digest"
+    t.string "password_digest", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
