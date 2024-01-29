@@ -23,12 +23,17 @@
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.email_field :email %>
   </div>
 
   <div class="field">
     <%= form.label :password %>
     <%= form.password_field :password, type: :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, type: :password %>
   </div>
 
   <div class="actions">

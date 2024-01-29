@@ -5194,3 +5194,741 @@ Completed 200 OK in 76ms (Views: 58.9ms | ActiveRecord: 9.6ms | Allocations: 120
 
 
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test@test.com"], ["password_digest", "$2a$12$DESbiTvkDgYiNtO15v3EteYcO5EK5.WXZG3HBmujivL8PMoNohjte"], ["created_at", "2024-01-29 22:32:45.186958"], ["updated_at", "2024-01-29 22:32:45.186958"]]
+  [1m[36mTRANSACTION (23.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:44:30 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2658)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 9140)
+Completed 200 OK in 42ms (Views: 23.6ms | ActiveRecord: 2.2ms | Allocations: 14010)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 01:45:33 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 47.5ms | Allocations: 3596)
+  Rendered users/new.html.erb within layouts/application (Duration: 50.8ms | Allocations: 3950)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 8499)
+Completed 200 OK in 83ms (Views: 62.3ms | ActiveRecord: 8.4ms | Allocations: 14965)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 01:45:40 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.minullin535@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.minullin535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users/new
+Completed 302 Found in 347ms (ActiveRecord: 3.1ms | Allocations: 3792)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 01:45:41 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.6ms | Allocations: 1208)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5361)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 5749)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 01:45:48 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.minullin535@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.minullin535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users/new
+Completed 302 Found in 339ms (ActiveRecord: 4.0ms | Allocations: 3220)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 01:45:49 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.3ms | Allocations: 1202)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5353)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 5739)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 01:49:07 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 1931)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 6836)
+Completed 200 OK in 46ms (Views: 25.4ms | ActiveRecord: 6.9ms | Allocations: 12925)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 01:49:18 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.minullin535@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.minullin535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users/new
+Completed 302 Found in 353ms (ActiveRecord: 2.3ms | Allocations: 3391)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 01:49:18 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.8ms | Allocations: 1443)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5605)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 5993)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 01:52:07 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.miin535@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.miin535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Тимур"], ["last_name", "Минуллин"], ["email", "timur.miin535@gmail.com"], ["password_digest", "$2a$12$fSOVenjO.czPvBgKmmpF6OvhXNuR9l2jP3bAmPrxbiOp0.Z00K4te"], ["created_at", "2024-01-29 22:52:08.168689"], ["updated_at", "2024-01-29 22:52:08.168689"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (50.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 387ms (ActiveRecord: 53.3ms | Allocations: 3747)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:52:08 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 6331)
+Completed 200 OK in 21ms (Views: 13.6ms | ActiveRecord: 1.0ms | Allocations: 8615)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:57:10 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 13.9ms | Allocations: 4756)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 11368)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.8ms | Allocations: 13990)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_page' for #<ActionView::Base:0x0000000000ba18>
+Did you mean?  current_page?):
+    29:       </ul>
+    30:       <ul>
+    31:         <li>
+    32:           <%= nav_tab 'Sign Up', new_user_path, current_page: current_page %></li>
+    33:       </ul>
+    34:     </div>
+    35:   </div>
+  
+app/views/shared/_navbar.html.erb:32
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:57:25 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 7619)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.1ms | Allocations: 9029)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!--a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link active"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About us", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <%= nav_tab 'Sign Up', new_user_path]%></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+2:      <div class="container-fluid">
+3:        <!--a class="navbar-brand" href="#">Navbar</a>-->
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+8:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+9:            <li class="nav-item">
+10:              <%= link_to "Home", root_path, class: "nav-link active"%>
+11:            </li>
+12:            <li class="nav-item">
+13:              <%= link_to "About us", about_path, class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item dropdown">
+16:              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+17:                Dropdown
+18:              </a>
+19:              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+20:                <li><a class="dropdown-item" href="#">Action</a></li>
+21:                <li><a class="dropdown-item" href="#">Another action</a></li>
+22:                <li><hr class="dropdown-divider"></li>
+23:                <li><a class="dropdown-item" href="#">Something else here</a></li>
+24:              </ul>
+25:            </li>
+26:            <li class="nav-item">
+27:              <a class="nav-link disabled">Disabled</a>
+28:            </li>
+29:          </ul>
+30:          <ul>
+31:            <li>
+32:              <%= nav_tab 'Sign Up', new_user_path]%></li>
+33:          </ul>
+34:        </div>
+35:      </div>
+36:    </nav>
+  
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected ']', expecting ')'
+app/views/shared/_navbar.html.erb:38: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected ']', expecting ')'
+app/views/shared/_navbar.html.erb:38: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected ']', expecting ')'
+app/views/shared/_navbar.html.erb:38: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:32: syntax error, unexpected ']', expecting ')'
+app/views/shared/_navbar.html.erb:38: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:57:34 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 10.9ms | Allocations: 4133)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 10364)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.4ms | Allocations: 11634)
+
+
+  
+ActionView::Template::Error (undefined method `nav_tab' for #<ActionView::Base:0x0000000000c4e0>):
+    29:       </ul>
+    30:       <ul>
+    31:         <li>
+    32:           <%= nav_tab 'Sign Up', new_user_path%></li>
+    33:       </ul>
+    34:     </div>
+    35:   </div>
+  
+app/views/shared/_navbar.html.erb:32
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:58:50 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 6557)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.0ms | Allocations: 7865)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 01:58:52 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.7ms | Allocations: 1978)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6365)
+Completed 200 OK in 37ms (Views: 17.5ms | ActiveRecord: 4.5ms | Allocations: 12257)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 01:59:07 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.n535@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.n535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Тимур"], ["last_name", "Минуллин"], ["email", "timur.n535@gmail.com"], ["password_digest", "$2a$12$ZIpiD0xxrKXkrDelVuwq0OU9ldp7eP/sIZdq3lsbfD75XJxfaoTda"], ["created_at", "2024-01-29 22:59:07.470185"], ["updated_at", "2024-01-29 22:59:07.470185"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (31.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 422ms (ActiveRecord: 34.5ms | Allocations: 3981)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-30 01:59:07 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 5279)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 1.9ms | Allocations: 5752)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-30 02:08:21 +0300
+  
+NoMethodError (undefined method `user_signed_in?' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:13:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/projects_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-01-30 02:10:04 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 7775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1227)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 13295)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 18.0ms | Allocations: 15916)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!--a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link active"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About us", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+
+      <%= if user_signed_in?%>
+        <%= current_user.first_name %>
+      <%= else %>
+        <%= link_to "Sign up", new_user_path %>
+      <%= end %>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+2:      <div class="container-fluid">
+3:        <!--a class="navbar-brand" href="#">Navbar</a>-->
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+8:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+9:            <li class="nav-item">
+10:              <%= link_to "Home", root_path, class: "nav-link active"%>
+11:            </li>
+12:            <li class="nav-item">
+13:              <%= link_to "About us", about_path, class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item dropdown">
+16:              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+17:                Dropdown
+18:              </a>
+19:              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+20:                <li><a class="dropdown-item" href="#">Action</a></li>
+21:                <li><a class="dropdown-item" href="#">Another action</a></li>
+22:                <li><hr class="dropdown-divider"></li>
+23:                <li><a class="dropdown-item" href="#">Something else here</a></li>
+24:              </ul>
+25:            </li>
+26:            <li class="nav-item">
+27:              <a class="nav-link disabled">Disabled</a>
+28:            </li>
+29:          </ul>
+30:    
+31:          <%= if user_signed_in?%>
+32:            <%= current_user.first_name %>
+33:          <%= else %>
+34:            <%= link_to "Sign up", new_user_path %>
+35:          <%= end %>
+36:        </div>
+37:      </div>
+38:    </nav>
+  
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 02:10:07 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1217)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 6350)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.1ms | Allocations: 6790)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!--a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link active"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About us", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+
+      <%= if user_signed_in?%>
+        <%= current_user.first_name %>
+      <%= else %>
+        <%= link_to "Sign up", new_user_path %>
+      <%= end %>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+2:      <div class="container-fluid">
+3:        <!--a class="navbar-brand" href="#">Navbar</a>-->
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+8:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+9:            <li class="nav-item">
+10:              <%= link_to "Home", root_path, class: "nav-link active"%>
+11:            </li>
+12:            <li class="nav-item">
+13:              <%= link_to "About us", about_path, class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item dropdown">
+16:              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+17:                Dropdown
+18:              </a>
+19:              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+20:                <li><a class="dropdown-item" href="#">Action</a></li>
+21:                <li><a class="dropdown-item" href="#">Another action</a></li>
+22:                <li><hr class="dropdown-divider"></li>
+23:                <li><a class="dropdown-item" href="#">Something else here</a></li>
+24:              </ul>
+25:            </li>
+26:            <li class="nav-item">
+27:              <a class="nav-link disabled">Disabled</a>
+28:            </li>
+29:          </ul>
+30:    
+31:          <%= if user_signed_in?%>
+32:            <%= current_user.first_name %>
+33:          <%= else %>
+34:            <%= link_to "Sign up", new_user_path %>
+35:          <%= end %>
+36:        </div>
+37:      </div>
+38:    </nav>
+  
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 02:10:48 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 1904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 1223)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 7458)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 2.4ms | Allocations: 8730)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!--a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link active"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About us", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+
+      <%= if user_signed_in?%>
+        <p><%= current_user.first_name %></p>
+      <%= else %>
+        <p><%= link_to "Sign up", new_user_path %></p>
+      <%= end %>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+2:      <div class="container-fluid">
+3:        <!--a class="navbar-brand" href="#">Navbar</a>-->
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+8:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+9:            <li class="nav-item">
+10:              <%= link_to "Home", root_path, class: "nav-link active"%>
+11:            </li>
+12:            <li class="nav-item">
+13:              <%= link_to "About us", about_path, class: "nav-link" %>
+14:            </li>
+15:            <li class="nav-item dropdown">
+16:              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+17:                Dropdown
+18:              </a>
+19:              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+20:                <li><a class="dropdown-item" href="#">Action</a></li>
+21:                <li><a class="dropdown-item" href="#">Another action</a></li>
+22:                <li><hr class="dropdown-divider"></li>
+23:                <li><a class="dropdown-item" href="#">Something else here</a></li>
+24:              </ul>
+25:            </li>
+26:            <li class="nav-item">
+27:              <a class="nav-link disabled">Disabled</a>
+28:            </li>
+29:          </ul>
+30:    
+31:          <%= if user_signed_in?%>
+32:            <p><%= current_user.first_name %></p>
+33:          <%= else %>
+34:            <p><%= link_to "Sign up", new_user_path %></p>
+35:          <%= end %>
+36:        </div>
+37:      </div>
+38:    </nav>
+  
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/shared/_navbar.html.erb:31: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/shared/_navbar.html.erb:33: syntax error, unexpected `else'
+app/views/shared/_navbar.html.erb:35: syntax error, unexpected `end'
+app/views/shared/_navbar.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 02:11:35 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 6611)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 1.1ms | Allocations: 7909)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 02:11:37 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 1897)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 6279)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 11405)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 02:11:49 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.minullin535@ail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (30.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.minullin535@ail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (3.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Тимур"], ["last_name", "Минуллин"], ["email", "timur.minullin535@ail.com"], ["password_digest", "$2a$12$wJEIfjYy/tC3dxUfq9JMZehEgVPI0mEU/Yl4VQk1zQ/p1nVuTECKW"], ["created_at", "2024-01-29 23:11:49.706912"], ["updated_at", "2024-01-29 23:11:49.706912"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 409ms (ActiveRecord: 65.5ms | Allocations: 3836)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-30 02:11:49 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (4.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 4.6ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 6112)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 6.1ms | Allocations: 6586)
+
+
