@@ -29,7 +29,7 @@
       </ul>
 
       <% if user_signed_in?%>
-        <p><%= current_user.first_name %></p>
+        <p><%= current_user.name_or_email %></p>
       <% else %>
         <p><%= link_to "Sign up", new_user_path %></p>
       <% end %>

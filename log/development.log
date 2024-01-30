@@ -5932,3 +5932,362 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 6.1ms | Allocations: 6586)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:12:45 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 7771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 21.6ms | Allocations: 8356)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 20420)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 21.8ms | Allocations: 23035)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x00007fd94c072038>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:13:52 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 32.6ms | Allocations: 9144)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 14661)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 16.3ms | Allocations: 16554)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x00007fd94c1caef8>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:13:54 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 12.7ms | Allocations: 3925)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 9048)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.5ms | Allocations: 9487)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x00007fd944b57e10>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:14:41 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 27.6ms | Allocations: 3925)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 9047)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 3.6ms | Allocations: 9484)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x00007fd9381a0f40>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 13:14:43 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 1896)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 24.8ms | Allocations: 4116)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 10249)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.4ms | Allocations: 11243)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x00007fd9400f7eb0>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/user/new" for 127.0.0.1 at 2024-01-30 13:14:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+Started GET "/?_method=delete&authenticity_token=[FILTERED]" for 127.0.0.1 at 2024-01-30 13:14:56 +0300
+Processing by ProjectsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 13.3ms | Allocations: 3928)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 9062)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.7ms | Allocations: 9500)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x000055e5a855e680>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:14:59 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 15.7ms | Allocations: 3925)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 9047)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.6ms | Allocations: 9484)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x000055e5a8be96f8>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:15:00 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 33.8ms | Allocations: 3925)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 9047)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 4.2ms | Allocations: 9484)
+
+
+  
+ActionView::Template::Error (undefined method `decorate' for #<User:0x000055e5a7be0310>):
+    28:         </li>
+    29:       </ul>
+    30: 
+    31:       <% if user_signed_in?%>
+    32:         <p><%= current_user.name_or_email %></p>
+    33:       <% else %>
+    34:         <p><%= link_to "Sign up", new_user_path %></p>
+  
+app/controllers/application_controller.rb:6:in `current_user'
+app/controllers/application_controller.rb:10:in `user_signed_in?'
+app/controllers/application_controller.rb:14:in `user_signed_in?'
+app/views/shared/_navbar.html.erb:31
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:15:49 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 25.7ms | Allocations: 6932)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 15816)
+Completed 200 OK in 90ms (Views: 65.6ms | ActiveRecord: 11.1ms | Allocations: 20709)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 13:16:28 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 42.4ms | Allocations: 3896)
+  Rendered users/new.html.erb within layouts/application (Duration: 44.8ms | Allocations: 4372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 8.0ms | Allocations: 1831)
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 12417)
+Completed 200 OK in 110ms (Views: 77.8ms | ActiveRecord: 8.5ms | Allocations: 21049)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 13:16:41 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"", "last_name"=>"", "email"=>"timur.minullin535@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.minullin535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users/new
+Completed 302 Found in 378ms (ActiveRecord: 4.0ms | Allocations: 3596)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 13:16:41 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.9ms | Allocations: 1443)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6509)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.0ms | Allocations: 6906)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 13:16:54 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Тимур", "last_name"=>"Минуллин", "email"=>"timur.minullin535@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timur.minullin535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/users/new
+Completed 302 Found in 373ms (ActiveRecord: 5.0ms | Allocations: 3244)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-01-30 13:16:55 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.8ms | Allocations: 1437)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1551)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 4.0ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 6500)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.2ms | Allocations: 6894)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-30 13:17:09 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"", "last_name"=>"", "email"=>"timun535@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timun535@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", ""], ["last_name", ""], ["email", "timun535@gmail.com"], ["password_digest", "$2a$12$jC/6EA1OI3oA/XEHfjIkbO9BJCMLGkIXQ1T2qIziOKXdL5juIHlYe"], ["created_at", "2024-01-30 10:17:09.850969"], ["updated_at", "2024-01-30 10:17:09.850969"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (30.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 412ms (ActiveRecord: 33.8ms | Allocations: 3760)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-30 13:17:09 +0300
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7135)
+Completed 200 OK in 38ms (Views: 31.5ms | ActiveRecord: 2.3ms | Allocations: 9483)
+
+
