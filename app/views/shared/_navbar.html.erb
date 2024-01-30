@@ -30,8 +30,10 @@
 
       <% if user_signed_in?%>
         <p><%= current_user.name_or_email %></p>
+        <p><%= button_to "Log out", session_path, method: :delete %></p>
       <% else %>
         <p><%= link_to "Sign up", new_user_path %></p>
+        <p><%= link_to "Log in", new_session_path %></p>
       <% end %>
     </div>
   </div>

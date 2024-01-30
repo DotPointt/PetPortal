@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_no_authentication
 
   skip_before_action :verify_authenticity_token  #разобраться с аутенсити токен
   

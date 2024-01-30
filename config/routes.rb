@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "projects#index"
 
+  resource :session, only: %i[new create destroy]
   resources :projects
   resources :users, only: %i[new create]
 
