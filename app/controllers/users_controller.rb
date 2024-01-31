@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
-  before_action :require_no_authentication
+  before_action :require_no_authentication, only: %i[new, create]
+  before_action :require_authentication, only: %i[edit, update]
+  before_action :set_user!, only: %i[edit, update]
 
-  skip_before_action :verify_authenticity_token  #разобраться с аутенсити токен
+  #skip_before_action :verify_authenticity_token  
+  #разобраться с аутенсити токен
   
   def new
     @user = User.new  
@@ -18,6 +21,13 @@ class UsersController < ApplicationController
     end    
   end
 
+  def edit 
+  
+  end
+
+  def update 
+  
+  end
 
   private
 
