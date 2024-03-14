@@ -1,5 +1,11 @@
 class User < ApplicationRecord
-  
+  attr_accessor :token
+
+  enum user_type: {
+    individual: "individual",
+    company: "company"
+  }
+
   has_secure_password
 
   has_many :ProjectMembership

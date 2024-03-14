@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/rmosolgo/graphiql-rails.git
+  revision: 8d3c96190cbe2004be99b23c28d28d96962bb8d0
+  specs:
+    graphiql-rails (1.10.0)
+      railties
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,6 +73,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    base64 (0.2.0)
     bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.17.1)
@@ -95,6 +103,8 @@ GEM
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphql (2.2.13)
+      base64
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -256,6 +266,8 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   draper (~> 4.0)
+  graphiql-rails!
+  graphql (~> 2.2)
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.3)
