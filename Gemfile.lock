@@ -107,6 +107,7 @@ GEM
       base64
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    interactor (3.1.2)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -268,6 +269,7 @@ DEPENDENCIES
   draper (~> 4.0)
   graphiql-rails!
   graphql (~> 2.2)
+  interactor
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.3)

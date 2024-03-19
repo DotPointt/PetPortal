@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'draper', '~> 4.0'
 
+gem "interactor"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

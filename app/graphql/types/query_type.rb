@@ -27,5 +27,8 @@ module Types
       authenticate!
       current_user
     end
+
+    field :project, resolver: Resolvers::Project
+    field :projects, resolver: Resolvers::Projects
   end
 end
