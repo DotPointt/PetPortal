@@ -1,0 +1,16 @@
+﻿version: "3.9"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "petportaldb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "12345678"
+    volumes:
+      - postgres-data:/var/lin/postgresql/data
+    ports:
+      - "5432-5432"
+        
+volumes:
+  postgres-data:

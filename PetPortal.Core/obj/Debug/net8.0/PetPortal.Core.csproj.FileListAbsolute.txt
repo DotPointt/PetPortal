@@ -1,0 +1,11 @@
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\bin\Debug\net8.0\PetPortal.Core.deps.json
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\bin\Debug\net8.0\PetPortal.Core.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\bin\Debug\net8.0\PetPortal.Core.pdb
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\PetPortal.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\PetPortal.Core.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\PetPortal.Core.AssemblyInfo.cs
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\PetPortal.Core.csproj.CoreCompileInputs.cache
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\PetPortal.Core.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\refint\PetPortal.Core.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\PetPortal.Core.pdb
+C:\Users\timur\source\repos\PetPortal\PetPortal.Core\obj\Debug\net8.0\ref\PetPortal.Core.dll
