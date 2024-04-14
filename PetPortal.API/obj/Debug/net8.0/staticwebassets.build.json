@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wQX8ay7fBE0dY3i3P+uOe6Kzsa6skEcUtH1/CEJDPYg=",
+  "Source": "PetPortal.API",
+  "BasePath": "_content/PetPortal.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

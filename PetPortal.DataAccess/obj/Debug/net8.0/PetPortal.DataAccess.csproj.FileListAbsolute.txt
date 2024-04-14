@@ -1,0 +1,17 @@
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\bin\Debug\net8.0\PetPortal.DataAccess.deps.json
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\bin\Debug\net8.0\PetPortal.DataAccess.runtimeconfig.json
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\bin\Debug\net8.0\PetPortal.DataAccess.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\bin\Debug\net8.0\PetPortal.DataAccess.pdb
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\bin\Debug\net8.0\PetPortal.Core.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\bin\Debug\net8.0\PetPortal.Core.pdb
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.csproj.AssemblyReference.cache
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.AssemblyInfo.cs
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPorta.585164C8.Up2Date
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\refint\PetPortal.DataAccess.dll
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.pdb
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\PetPortal.DataAccess.genruntimeconfig.cache
+C:\Users\timur\source\repos\PetPortal\PetPortal.DataAccess\obj\Debug\net8.0\ref\PetPortal.DataAccess.dll
